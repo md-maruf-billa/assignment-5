@@ -9,3 +9,8 @@
     font-family: "Inter", sans-serif;
 }
 
+#info-bg{
+    background: url('../images/info-devider.png') no-repeat;
+    background-color: #FFFFFF;
+    background-position: 88% 50%;
+}

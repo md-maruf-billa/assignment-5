@@ -134,7 +134,7 @@
                         <small class="text-[rgba(3,7,18,0.50)] text-[18px]">use by Jun 2024</small>
                     </div>
                     <div class="text-center">
-                        <h2 class="title-font text-[24px] lg:text-4xl font-bold">NEW15</h2>
+                        <h2 id="coupon-1" class="title-font text-[24px] lg:text-4xl font-bold">NEW15</h2>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                         <small class="text-[rgba(3,7,18,0.50)] text-[18px]">use by Jun 2024</small>
                     </div>
                     <div class="text-center">
-                        <h2 class="title-font text-[24px] lg:text-4xl font-bold">Couple 20</h2>
+                        <h2 id="coupon-2" class="title-font text-[24px] lg:text-4xl font-bold">Couple 20</h2>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -325,9 +325,9 @@
                         </div>
                         <div class="flex justify-center my-4">
                             <div class="bg-white rounded-2xl w-[370px] flex justify-between normal-font">
-                                <input class="border-none outline-none px-4 text-xl rounded-2xl" type="text"
-                                    placeholder="Have any copupon?">
-                                <button class="btn bg-[#1DD100] text-white text-xl">Apply</button>
+                                <input id="couponInput" class="border-none outline-none px-4 text-xl rounded-2xl" type="text"
+                                    placeholder="Have any coupon?">
+                                <button onclick="couponApply()" id="apply-btn" disabled class="btn bg-[#1DD100] text-white text-xl">Apply</button>
                             </div>
                         </div>
                         <div class="flex justify-between text-2xl font-bold normal-font">

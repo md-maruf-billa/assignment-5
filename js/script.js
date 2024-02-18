@@ -57,6 +57,7 @@ for (const seat of seat_items) {
 
             // ----create buy recept---
             create_items(seat.innerText, get_element_by_id('seat-price').innerText);
+            
         }
         else {
             alert("You can't select more than 4 ticket")
@@ -64,4 +65,22 @@ for (const seat of seat_items) {
         
         
     })
+}
+
+get_element_by_id('couponInput').addEventListener('keyup', function () {
+    let userInput = get_element_by_id('couponInput').value;
+    if (userInput !== '') {
+        get_element_by_id('apply-btn').removeAttribute('disabled');
+        
+    }
+})
+
+function couponApply() {
+    let userInput = get_element_by_id('couponInput').value;
+    const coupon_1 = get_element_by_id("coupon-1").innerText;
+    const coupon_2 = get_element_by_id("coupon-2").innerText;
+    if (userInput === coupon_1) {
+        let discount = ticket_total * 0.15;
+        set_element_by_id('grand-total', ticket_total - discount);
+    }
 }

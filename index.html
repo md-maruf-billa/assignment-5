@@ -207,7 +207,7 @@
                     </div>
 
                 </div>
-                <div class="text-center title-font ">
+                <div class="text-center title-font flex flex-col justify-center items-center gap-2">
                     <img src="./images/fare.png" alt="">
                     <h2 class="text-3xl font-bold">550 Taka</h2>
                     <p class="text-[#03071299] text-2xl font-semibold">Per Seat</p>
@@ -340,7 +340,8 @@
                         </div>
                         <div class="flex justify-center my-4">
                             <div class="bg-white rounded-2xl w-[370px] flex justify-between normal-font">
-                                <input class="border-none outline-none px-4 text-xl rounded-2xl" type="text" placeholder="Have any copupon?">
+                                <input class="border-none outline-none px-4 text-xl rounded-2xl" type="text"
+                                    placeholder="Have any copupon?">
                                 <button class="btn bg-[#1DD100] text-white text-xl">Apply</button>
                             </div>
                         </div>
@@ -350,25 +351,52 @@
                         </div>
                     </div>
 
-                    <form class="normal-font">
-                        <div class="flex flex-col">
-                            <label for="">Passenger Name<sup>*</sup></label>
-                            <input type="text" placeholder="Enter your name">
+                    <form class="normal-font space-y-4 mt-6">
+                        <div class="flex flex-col gap-2">
+                            <label for="" class="text-xl normal-font font-semibold">Passenger Name<sup>*</sup></label>
+                            <input class="border-2 border-[#0307121A] p-4 rounded-2xl" type="text"
+                                placeholder="Enter your name">
                         </div>
-                        <div class="flex flex-col">
-                            <label for="">Phone Number*<sup>*</sup></label>
-                            <input type="number" placeholder="Enter your phone number">
+                        <div class="flex flex-col gap-2">
+                            <label for="" class="text-xl normal-font font-semibold">Phone Number*<sup>*</sup></label>
+                            <input class="border-2 border-[#0307121A] p-4 rounded-2xl" type="number"
+                                placeholder="Enter your phone number">
                         </div>
-                        <div class="flex flex-col">
-                            <label for="">E-mail<sup>*</sup></label>
-                            <input type="email" placeholder="Enter your email id">
+                        <div class="flex flex-col gap-2">
+                            <label for="" class="text-xl normal-font font-semibold">E-mail<sup>*</sup></label>
+                            <input class="border-2 border-[#0307121A] p-4 rounded-2xl" type="email"
+                                placeholder="Enter your email id">
                         </div>
                     </form>
+                    <div class="mt-10 ">
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn w-full bg-[#1DD100] text-2xl text-white" onclick="my_modal_5.showModal()">Next</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <div class="flex items-center justify-center mb-8">
+                                    <img src="./images/success.png" alt="">
+                                </div>
+                                <h3 class="font-bold text-lg">Thank you for Booking Our Bus Seats.
+                                We are working hard to find the best service and deals for you</h3>
+                                <p class="py-4">Shortly you will find a confirmation in your email.</p>
+                                <div class="modal-action">
+                                    <form class="w-full" method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn bg-[#27AE60] w-full text-xl text-white font-bold">Continue</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+
+
+    <!-- -------start footer hare------- -->
+    
 
     <!-- -----------------Main Script File -------------- -->
     <script src="./js/script.js"></script>

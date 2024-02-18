@@ -77,8 +77,8 @@
                     requested to check
                     fare before purchase.”
                 </p>
-                <button class="btn bg-[#1DD100] text-black font-[700] border-none outline-none title-font">Buy
-                    Tickets</button>
+                <a href="#travel-section" class="btn bg-[#1DD100] text-black font-[700] border-none outline-none title-font">Buy
+                    Tickets</a>
             </div>
             <!-- -------Card hare -->
 
@@ -160,7 +160,7 @@
 
 
         <!-- ----------Travels section start hare--- -->
-        <section class="my-36  border-t-4 border-[#1DD100] rounded-[88px] pt-[130px]">
+        <section id="travel-section" class="my-36  border-t-4 border-[#1DD100] rounded-[88px] pt-[130px]">
             <div class="text-center title-font space-y-2">
                 <h1 class="text-[40px] font-bold">M.M Travel</h1>
                 <p>Due to Special Reserve service, Reserve bus ticket fare might be higher than regular, Customers are
@@ -181,7 +181,7 @@
                         </div>
                         <div class="flex text-[#1DD100] items-center gap-2 bg-[#1DD10026] w-[180px] p-3 rounded-2xl">
                             <img src="./images/seat-green.png" alt="">
-                            <span>40</span>
+                            <span id="available-seat">40</span>
                             <p>Seats left</p>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                 </div>
                 <div class="text-center title-font flex flex-col justify-center items-center gap-2">
                     <img src="./images/fare.png" alt="">
-                    <h2 class="text-3xl font-bold">550 Taka</h2>
+                    <h2 class="text-3xl font-bold"><span id="seat-price">550</span> Taka</h2>
                     <p class="text-[#03071299] text-2xl font-semibold">Per Seat</p>
                 </div>
             </div>
@@ -232,73 +232,73 @@
                     <div id="sit-count" class="mt-10">
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">A</button>
-                            <button id="a1" class="btn">A1</button>
-                            <button id="a2" class="btn">A2</button>
-                            <button id="a3" class="btn">A3</button>
-                            <button id="a4" class="btn">A4</button>
+                            <button id="a1" class="btn sit-button">A1</button>
+                            <button id="a2" class="btn sit-button">A2</button>
+                            <button id="a3" class="btn sit-button">A3</button>
+                            <button id="a4" class="btn sit-button">A4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">B</button>
-                            <button id="b1" class="btn">B1</button>
-                            <button id="b2" class="btn">B2</button>
-                            <button id="b3" class="btn">B3</button>
-                            <button id="b4" class="btn">B4</button>
+                            <button id="b1" class="btn sit-button">B1</button>
+                            <button id="b2" class="btn sit-button">B2</button>
+                            <button id="b3" class="btn sit-button">B3</button>
+                            <button id="b4" class="btn sit-button">B4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">C</button>
-                            <button id="c1" class="btn">C1</button>
-                            <button id="c2" class="btn">C2</button>
-                            <button id="c3" class="btn">C3</button>
-                            <button id="c4" class="btn">C4</button>
+                            <button id="c1" class="btn sit-button">C1</button>
+                            <button id="c2" class="btn sit-button">C2</button>
+                            <button id="c3" class="btn sit-button">C3</button>
+                            <button id="c4" class="btn sit-button">C4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">D</button>
-                            <button id="d1" class="btn">D1</button>
-                            <button id="d2" class="btn">D2</button>
-                            <button id="d3" class="btn">D3</button>
-                            <button id="d4" class="btn">D4</button>
+                            <button id="d1" class="btn sit-button">D1</button>
+                            <button id="d2" class="btn sit-button">D2</button>
+                            <button id="d3" class="btn sit-button">D3</button>
+                            <button id="d4" class="btn sit-button">D4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">E</button>
-                            <button id="e1" class="btn">E1</button>
-                            <button id="e2" class="btn">E2</button>
-                            <button id="e3" class="btn">E3</button>
-                            <button id="e4" class="btn">E4</button>
+                            <button id="e1" class="btn sit-button">E1</button>
+                            <button id="e2" class="btn sit-button">E2</button>
+                            <button id="e3" class="btn sit-button">E3</button>
+                            <button id="e4" class="btn sit-button">E4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">F</button>
-                            <button id="f1" class="btn">F1</button>
-                            <button id="f2" class="btn">F2</button>
-                            <button id="f3" class="btn">F3</button>
-                            <button id="f4" class="btn">F4</button>
+                            <button id="f1" class="btn sit-button">F1</button>
+                            <button id="f2" class="btn sit-button">F2</button>
+                            <button id="f3" class="btn sit-button">F3</button>
+                            <button id="f4" class="btn sit-button">F4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">G</button>
-                            <button id="g1" class="btn">G1</button>
-                            <button id="g2" class="btn">G2</button>
-                            <button id="g3" class="btn">G3</button>
-                            <button id="g4" class="btn">G4</button>
+                            <button id="g1" class="btn sit-button">G1</button>
+                            <button id="g2" class="btn sit-button">G2</button>
+                            <button id="g3" class="btn sit-button">G3</button>
+                            <button id="g4" class="btn sit-button">G4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">H</button>
-                            <button id="h1" class="btn">H1</button>
-                            <button id="h2" class="btn">H2</button>
-                            <button id="h3" class="btn">H3</button>
-                            <button id="h4" class="btn">H4</button>
+                            <button id="h1" class="btn sit-button">H1</button>
+                            <button id="h2" class="btn sit-button">H2</button>
+                            <button id="h3" class="btn sit-button">H3</button>
+                            <button id="h4" class="btn sit-button">H4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">I</button>
-                            <button id="i1" class="btn">I1</button>
-                            <button id="i2" class="btn">I2</button>
-                            <button id="i3" class="btn">I3</button>
-                            <button id="i4" class="btn">I4</button>
+                            <button id="i1" class="btn sit-button">I1</button>
+                            <button id="i2" class="btn sit-button">I2</button>
+                            <button id="i3" class="btn sit-button">I3</button>
+                            <button id="i4" class="btn sit-button">I4</button>
                         </div>
                         <div class="flex justify-around mb-6 normal-font">
                             <button class="text-2xl font-bold normal-font text-[rgba(3,7,18,0.50)]">J</button>
-                            <button id="j1" class="btn">J1</button>
-                            <button id="j2" class="btn">J2</button>
-                            <button id="j3" class="btn">J3</button>
-                            <button id="j4" class="btn">J4</button>
+                            <button id="j1" class="btn sit-button">J1</button>
+                            <button id="j2" class="btn sit-button">J2</button>
+                            <button id="j3" class="btn sit-button">J3</button>
+                            <button id="j4" class="btn sit-button">J4</button>
                         </div>
                     </div>
 
@@ -311,32 +311,17 @@
                     <hr>
                     <div class="bg-[#F7F8F8] p-8 rounded-2xl mt-6">
                         <div class="flex justify-between text-2xl font-bold mb-2">
-                            <p>Seat <sup>2</sup></p>
+                            <p>Seat <sup id="selected-seat" class="bg-[#1DD100] px-3 rounded-3xl">0</sup></p>
                             <p>Class</p>
                             <p>Price</p>
                         </div>
                         <hr>
                         <ul id="select-ticket">
-                            <li>
-                                <p>C3</p>
-                                <p>Classic</p>
-                                <p>5500</p>
-                            </li>
-                            <li>
-                                <p>C3</p>
-                                <p>Classic</p>
-                                <p>5500</p>
-                            </li>
-                            <li>
-                                <p>C3</p>
-                                <p>Classic</p>
-                                <p>5500</p>
-                            </li>
                         </ul>
                         <hr>
                         <div class="flex justify-between text-2xl font-bold normal-font mt-2">
                             <p>Total Price</p>
-                            <p>0</p>
+                            <p id="total-price">0</p>
                         </div>
                         <div class="flex justify-center my-4">
                             <div class="bg-white rounded-2xl w-[370px] flex justify-between normal-font">
@@ -347,7 +332,7 @@
                         </div>
                         <div class="flex justify-between text-2xl font-bold normal-font">
                             <p>Grand Total</p>
-                            <p>0</p>
+                            <p id="grand-total">0</p>
                         </div>
                     </div>
 

@@ -1,5 +1,7 @@
 /* ---------custom fonts */
-
+html{
+    scroll-behavior: smooth;
+}
 
 .title-font{
     font-family: "Raleway", sans-serif;

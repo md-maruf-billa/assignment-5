@@ -80,7 +80,20 @@ function couponApply() {
     const coupon_1 = get_element_by_id("coupon-1").innerText;
     const coupon_2 = get_element_by_id("coupon-2").innerText;
     if (userInput === coupon_1) {
-        let discount = ticket_total * 0.15;
-        set_element_by_id('grand-total', ticket_total - discount);
+        let discount1 = ticket_total * 0.15;
+        set_element_by_id('grand-total', ticket_total - discount1);
+        get_element_by_id('input-filed').classList.add("hidden");
+    }
+    else if (userInput === coupon_2) {
+        let discount2 = ticket_total * 0.20;
+        set_element_by_id('grand-total', ticket_total - discount2);
+        get_element_by_id('input-filed').classList.add("hidden");
+    }
+    else {
+        alert("Your coupon is Invalid")
     }
 }
+
+get_element_by_id('submitInfo').addEventListener('keyup', function () {
+    get_element_by_id('modalbutton').removeAttribute("disabled");
+})

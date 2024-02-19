@@ -107,3 +107,7 @@ function couponApply() {
 get_element_by_id('submitInfo').addEventListener('keyup', function () {
     get_element_by_id('modalbutton').removeAttribute("disabled");
 })
+
+function reload() {
+    location.reload()
+}

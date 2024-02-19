@@ -33,19 +33,22 @@ function create_items(seatInner, ticketPrice) {
 let counter = 0;
 let ticket_total = 0;
 let check_arr = [];
+let condi_arr = [];
 let seat_items = document.getElementsByClassName('sit-button');
 
 for (const seat of seat_items) {
     seat.addEventListener('click', function (e) {
-        if (check_arr.length <= 4) {
+        
+        if (counter < 4) {
             if (check_arr.includes(seat)) {
                 alert("You can't select one seat more time.")
+                return;
 
             }
             else {
                 // ---counter and available site count
-                ticket_total += parseInt(get_element_by_id('seat-price').innerText);
                 counter += 1;
+                ticket_total += parseInt(get_element_by_id('seat-price').innerText);
                 let seat_available = parseInt(get_element_by_id('available-seat').innerText);
                 set_element_by_id('available-seat', seat_available - 1)
                 // ----set total----
@@ -60,11 +63,14 @@ for (const seat of seat_items) {
 
                 // ----create buy recept---
                 create_items(seat.innerText, get_element_by_id('seat-price').innerText);
+                
+                console.log(counter)
             }
         }
         else {
             alert("You can't select more than 4 ticket")
         }
+        
         check_arr.push(seat);
     })
 }

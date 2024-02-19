@@ -88,12 +88,16 @@ function couponApply() {
     if (userInput === coupon_1) {
         let discount1 = ticket_total * 0.15;
         set_element_by_id('grand-total', ticket_total - discount1);
+        set_element_by_id('discount-price',discount1)
         get_element_by_id('input-filed').classList.add("hidden");
+        get_element_by_id('discount').classList.remove("hidden");
     }
     else if (userInput === coupon_2) {
         let discount2 = ticket_total * 0.20;
         set_element_by_id('grand-total', ticket_total - discount2);
+        set_element_by_id('discount-price', discount2)
         get_element_by_id('input-filed').classList.add("hidden");
+        get_element_by_id('discount').classList.remove("hidden");
     }
     else {
         alert("Your coupon is Invalid")

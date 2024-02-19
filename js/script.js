@@ -10,9 +10,9 @@ function set_element_by_id(elementID, value) {
 }
 
 
-function create_items(seatInner,ticketPrice) {
+function create_items(seatInner, ticketPrice) {
     let new_li = document.createElement("li");
-    
+
     let p1 = document.createElement("p");
     p1.innerText = seatInner;
 
@@ -37,33 +37,35 @@ let seat_items = document.getElementsByClassName('sit-button');
 
 for (const seat of seat_items) {
     seat.addEventListener('click', function (e) {
-        check_arr.push(seat);
-
         if (check_arr.length <= 4) {
-            // ---counter and available site count
-            ticket_total += parseInt(get_element_by_id('seat-price').innerText);
-            counter += 1;
-            let seat_available = parseInt(get_element_by_id('available-seat').innerText);
-            set_element_by_id('available-seat', seat_available - 1)
-            // ----set total----
-            set_element_by_id('total-price', ticket_total);
-            set_element_by_id('grand-total', ticket_total);
-            // ---set button bg
-            e.target.classList.add('bg-[#1DD100]')
+            if (check_arr.includes(seat)) {
+                alert("You can't select one seat more time.")
+
+            }
+            else {
+                // ---counter and available site count
+                ticket_total += parseInt(get_element_by_id('seat-price').innerText);
+                counter += 1;
+                let seat_available = parseInt(get_element_by_id('available-seat').innerText);
+                set_element_by_id('available-seat', seat_available - 1)
+                // ----set total----
+                set_element_by_id('total-price', ticket_total);
+                set_element_by_id('grand-total', ticket_total);
+                // ---set button bg
+                e.target.classList.add('bg-[#1DD100]')
 
 
-            // ---selected seat-----
-            set_element_by_id('selected-seat', counter)
+                // ---selected seat-----
+                set_element_by_id('selected-seat', counter)
 
-            // ----create buy recept---
-            create_items(seat.innerText, get_element_by_id('seat-price').innerText);
-            
+                // ----create buy recept---
+                create_items(seat.innerText, get_element_by_id('seat-price').innerText);
+            }
         }
         else {
             alert("You can't select more than 4 ticket")
         }
-        
-        
+        check_arr.push(seat);
     })
 }
 
@@ -71,7 +73,7 @@ get_element_by_id('couponInput').addEventListener('keyup', function () {
     let userInput = get_element_by_id('couponInput').value;
     if (userInput !== '') {
         get_element_by_id('apply-btn').removeAttribute('disabled');
-        
+
     }
 })
 

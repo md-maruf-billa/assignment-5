@@ -63,8 +63,6 @@ for (const seat of seat_items) {
 
                 // ----create buy recept---
                 create_items(seat.innerText, get_element_by_id('seat-price').innerText);
-                
-                console.log(counter)
             }
         }
         else {
